@@ -7758,6 +7758,9 @@ button.bg-dark:focus {
 }
 
 @media (min-width: 576px) {
+  .p-sm-0 {
+    padding: 0 !important;
+  }
   .m-sm-0 {
     margin: 0 !important;
   }
