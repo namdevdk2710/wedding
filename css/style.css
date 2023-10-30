@@ -7172,6 +7172,14 @@ button.bg-dark:focus {
   overflow: hidden !important;
 }
 
+.t-0 {
+  top: 0 !important;
+}
+
+.l-0 {
+  left: 0 !important;
+}
+
 .position-static {
   position: static !important;
 }
@@ -9483,7 +9491,7 @@ a.text-dark:hover, a.text-dark:focus {
   position: fixed;
   width: 20px;
   left: calc(50% - 10px);
-  bottom: 30px;
+  bottom: 0;
   z-index: 11;
   animation: action 1s infinite alternate;
 }
@@ -9536,7 +9544,7 @@ a.text-dark:hover, a.text-dark:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
