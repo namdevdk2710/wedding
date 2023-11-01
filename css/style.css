@@ -7305,6 +7305,10 @@ button.bg-dark:focus {
   max-width: 100% !important;
 }
 
+.mw-300px {
+  max-width: 300px !important;
+}
+
 .mh-100 {
   max-height: 100% !important;
 }
@@ -8447,6 +8451,12 @@ button.bg-dark:focus {
   .ml-md-auto,
   .mx-md-auto {
     margin-left: auto !important;
+  }
+  .pr-md-30px {
+    padding-right: 30px !important;
+  }
+  .mh-md-300px {
+    max-height: 300px !important;
   }
 }
 
@@ -9771,5 +9781,29 @@ a.text-dark:hover, a.text-dark:focus {
 @media (max-width: 767.98px) {
   #event .border-right {
     border-right: none !important;
+  }
+}
+
+/* Falling heart */
+.container-heart {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.hearts {
+  font-size: 23px;
+  font-weight: bold;
+  position: fixed;
+  transform: translateY(0%);
+  top: -1vh;
+  left: 0;
+  animation: fall 1s ease-in infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(250vh);
   }
 }

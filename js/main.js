@@ -23,6 +23,9 @@
         "easeInOutExpo"
       );
 
+      const navbar = document.querySelector("#navbarCollapse");
+      navbar.classList.remove("show");
+
       if ($(this).parents(".navbar-nav").length) {
         $(".navbar-nav .active").removeClass("active");
         $(this).closest("a").addClass("active");
@@ -81,4 +84,27 @@
       },
     },
   });
+
+  // Falling heart
+  function hearts() {
+    const container = document.querySelector(".container-heart");
+    container.addEventListener("click", (event) => {
+      event.stopImmediatePropagation();
+    });
+
+    const create = document.createElement("div");
+    create.classList.add("hearts");
+    create.innerHTML = `💖`;
+
+    create.style.left = Math.random() * 100 + "vw";
+    create.style.animationDuration = Math.random() * 3 + 2 + "s";
+
+    container.appendChild(create);
+
+    setTimeout(() => {
+      create.remove();
+    }, 3000);
+  }
+
+  setInterval(hearts, 500);
 })(jQuery);
