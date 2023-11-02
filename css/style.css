@@ -9807,3 +9807,7 @@ a.text-dark:hover, a.text-dark:focus {
     transform: translateY(250vh);
   }
 }
+
+.map:hover {
+  color: #121F38 !important;
+}
