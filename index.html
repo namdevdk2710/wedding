@@ -30,6 +30,17 @@
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Loading -->
+    <div class="loading">
+      <h1 class="font-secondary">Chờ chút nè...</h1>
+      <div class="spinner">
+        <div class="heart heart1"></div>
+        <div class="heart heart2"></div>
+        <div class="heart heart3"></div>
+      </div>
+    </div>
+
+    <!-- Falling Heart -->
     <div class="container-heart"></div>
 
     <!-- Navbar Start -->
@@ -55,8 +66,8 @@
       >
         <div class="navbar-nav ml-auto py-0">
           <a href="#home" class="nav-item nav-link active">Trang chủ</a>
-          <a href="#about" class="nav-item nav-link">Chúng tôi</a>
-          <a href="#story" class="nav-item nav-link">Câu chuyện</a>
+          <a href="#about" class="nav-item nav-link">Cặp đôi</a>
+          <a href="#story" class="nav-item nav-link">Chuyện tình</a>
         </div>
         <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
           <h1 class="font-secondary text-white mb-n2">
@@ -64,9 +75,9 @@
           </h1>
         </a>
         <div class="navbar-nav mr-auto py-0">
-          <a href="#gallery" class="nav-item nav-link">Hình ảnh</a>
+          <a href="#gallery" class="nav-item nav-link">Album cưới</a>
           <a href="#event" class="nav-item nav-link">Sự kiện</a>
-          <a href="#contact" class="nav-item nav-link">Liên lạc</a>
+          <a href="#donate" class="nav-item nav-link">Mừng cưới</a>
         </div>
       </div>
     </nav>
@@ -93,17 +104,18 @@
               class="carousel-caption d-flex flex-column align-items-center justify-content-end"
             >
               <div class="p-4" style="max-width: 900px">
-                <h1 class="display-1 font-secondary text-white mt-n3">
-                  Nam & Ngọc
+                <h1
+                  class="display-4 font-secondary text-white mt-n3 d-flex flex-column flex-md-row"
+                >
+                  <p>Thành Nam</p>
+                  <i class="far fa-heart text-primary mx-4 mb-3"></i>
+                  <p>Bích Ngọc</p>
                 </h1>
                 <div
                   class="d-inline-block border-top border-bottom border-light py-3 px-4"
                 >
-                  <h3
-                    class="text-uppercase font-weight-normal text-white m-0"
-                    style="letter-spacing: 2px"
-                  >
-                    Save our date
+                  <h3 class="font-weight-normal text-white m-0 font-secondary">
+                    29 tháng 11 2023
                   </h3>
                 </div>
               </div>
@@ -116,14 +128,8 @@
 
     <!-- About Start -->
     <div class="container-fluid py-5" id="about">
-      <div class="container py-5">
+      <div class="container">
         <div class="section-title position-relative text-center">
-          <h6
-            class="text-uppercase text-primary mb-3"
-            style="letter-spacing: 3px"
-          >
-            Chúng tôi
-          </h6>
           <h1 class="font-secondary display-4">Cô dâu & Chú rể</h1>
           <i class="far fa-heart text-dark"></i>
         </div>
@@ -213,14 +219,8 @@
 
     <!-- Story Start -->
     <div class="container-fluid py-5" id="story">
-      <div class="container pt-5 pb-3">
+      <div class="container">
         <div class="section-title position-relative text-center">
-          <h6
-            class="text-uppercase text-primary mb-3"
-            style="letter-spacing: 3px"
-          >
-            Câu chuyện
-          </h6>
           <h1 class="font-secondary display-4">Câu chuyện tình yêu</h1>
           <i class="far fa-heart text-dark"></i>
         </div>
@@ -362,13 +362,7 @@
         class="section-title position-relative text-center"
         style="margin-bottom: 120px"
       >
-        <h6
-          class="text-uppercase text-primary mb-3"
-          style="letter-spacing: 3px"
-        >
-          Hình ảnh
-        </h6>
-        <h1 class="font-secondary display-4 text-white">Hình ảnh kỷ niệm</h1>
+        <h1 class="font-secondary display-4 text-white">Album cưới</h1>
         <i class="far fa-heart text-white"></i>
       </div>
       <div class="owl-carousel gallery-carousel">
@@ -406,6 +400,36 @@
           <img class="img-fluid w-100" src="img/gallery-4.jpg" alt="" />
           <a
             href="img/gallery-4.jpg"
+            data-lightbox="gallery"
+            class="position-absolute w-100 h-100 t-0 l-0"
+          >
+            <i class="fa fa-2x fa-plus text-white"></i>
+          </a>
+        </div>
+        <div class="gallery-item" class="position-relative">
+          <img class="img-fluid w-100" src="img/gallery-21.jpg" alt="" />
+          <a
+            href="img/gallery-21.jpg"
+            data-lightbox="gallery"
+            class="position-absolute w-100 h-100 t-0 l-0"
+          >
+            <i class="fa fa-2x fa-plus text-white"></i>
+          </a>
+        </div>
+        <div class="gallery-item" class="position-relative">
+          <img class="img-fluid w-100" src="img/gallery-22.jpg" alt="" />
+          <a
+            href="img/gallery-22.jpg"
+            data-lightbox="gallery"
+            class="position-absolute w-100 h-100 t-0 l-0"
+          >
+            <i class="fa fa-2x fa-plus text-white"></i>
+          </a>
+        </div>
+        <div class="gallery-item" class="position-relative">
+          <img class="img-fluid w-100" src="img/gallery-23.jpg" alt="" />
+          <a
+            href="img/gallery-23.jpg"
             data-lightbox="gallery"
             class="position-absolute w-100 h-100 t-0 l-0"
           >
@@ -482,66 +506,96 @@
             <i class="fa fa-2x fa-plus text-white"></i>
           </a>
         </div>
+        <div class="gallery-item" class="position-relative">
+          <img class="img-fluid w-100" src="img/gallery-12.jpg" alt="" />
+          <a
+            href="img/gallery-12.jpg"
+            data-lightbox="gallery"
+            class="position-absolute w-100 h-100 t-0 l-0"
+          >
+            <i class="fa fa-2x fa-plus text-white"></i>
+          </a>
+        </div>
+        <div class="gallery-item" class="position-relative">
+          <img class="img-fluid w-100" src="img/gallery-16.jpg" alt="" />
+          <a
+            href="img/gallery-16.jpg"
+            data-lightbox="gallery"
+            class="position-absolute w-100 h-100 t-0 l-0"
+          >
+            <i class="fa fa-2x fa-plus text-white"></i>
+          </a>
+        </div>
+        <div class="gallery-item" class="position-relative">
+          <img class="img-fluid w-100" src="img/gallery-19.jpg" alt="" />
+          <a
+            href="img/gallery-19.jpg"
+            data-lightbox="gallery"
+            class="position-absolute w-100 h-100 t-0 l-0"
+          >
+            <i class="fa fa-2x fa-plus text-white"></i>
+          </a>
+        </div>
+        <div class="gallery-item" class="position-relative">
+          <img class="img-fluid w-100" src="img/gallery-20.jpg" alt="" />
+          <a
+            href="img/gallery-20.jpg"
+            data-lightbox="gallery"
+            class="position-absolute w-100 h-100 t-0 l-0"
+          >
+            <i class="fa fa-2x fa-plus text-white"></i>
+          </a>
+        </div>
       </div>
     </div>
     <!-- Gallery End -->
 
     <!-- Event Start -->
     <div class="container-fluid py-5" id="event">
-      <div class="container py-5">
+      <div class="container">
         <div class="section-title position-relative text-center">
-          <h6
-            class="text-uppercase text-primary mb-3"
-            style="letter-spacing: 3px"
-          >
-            Sự kiện
-          </h6>
-          <h1 class="font-secondary display-4">Tiệc cưới</h1>
+          <h1 class="font-secondary display-4">Sự kiện cưới</h1>
           <i class="far fa-heart text-dark"></i>
         </div>
         <div class="row">
-          <div class="col-md-6 border-right border-primary">
+          <div class="col-md-6 border-right border-primary border-bottom">
             <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
+              <h4>Tiệc cưới - Khánh Hòa</h4>
               <img
-                class="img-thumbnail mb-4"
+                class="img-thumbnail mb-2"
                 style="max-height: 400px"
                 src="img/event-1.jpg"
                 alt=""
               />
-              <h4 class="mb-3">
-                Khánh Hòa
-                <a
-                  href="https://maps.app.goo.gl/WVJUyMo8D26whRBk8"
-                  target="_blank"
-                  class="map"
-                  ><i class="fa fa-map"></i
-                ></a>
-              </h4>
-              <p class="mb-0">Trung tâm tiệc cưới <b>Phúc Thịnh An</b></p>
-              <p class="mb-0">Đường 23/10, Diên An, Diên Khánh, Khánh Hòa</p>
-              <p class="mb-0 font-weight-bold">29-11-2023 05:00PM</p>
+              <p class="mb-0 font-weight-bold">05:00 PM 29/11/2023</p>
+              <p class="mb-2">Trung tâm tiệc cưới <b>Phúc Thịnh An</b></p>
+              <a
+                href="https://maps.app.goo.gl/WVJUyMo8D26whRBk8"
+                target="_blank"
+                class="map"
+              >
+                Xem bản đồ
+              </a>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="text-center text-md-left ml-md-3">
+            <div class="text-center text-md-left ml-md-3 mt-3 mt-md-0">
+              <h4>Báo hỷ - Đà Nẵng</h4>
               <img
-                class="img-thumbnail mb-4"
+                class="img-thumbnail mb-2"
                 style="max-height: 400px"
                 src="img/event-2.jpg"
                 alt=""
               />
-              <h4 class="mb-3">
-                Đà Nẵng
-                <a
-                  href="https://maps.app.goo.gl/Rx1ZjzDeektvdp7o8"
-                  target="_blank"
-                  class="map"
-                  ><i class="fa fa-map"></i
-                ></a>
-              </h4>
-              <p class="mb-0">Trung tâm tiệc cưới <b>Đại Hỷ</b></p>
-              <p class="mb-0">187 đường Hà Huy Tập, Thanh Khuê, Đà Nẵng</p>
-              <p class="mb-0 font-weight-bold">09-12-2023 05:00PM</p>
+              <p class="mb-0 font-weight-bold">05:00 PM 09/12/2023</p>
+              <p class="mb-2">Nhà hàng tiệc cưới <b>Đại Hỷ</b></p>
+              <a
+                href="https://maps.app.goo.gl/Rx1ZjzDeektvdp7o8"
+                target="_blank"
+                class="map"
+              >
+                Xem bản đồ
+              </a>
             </div>
           </div>
         </div>
@@ -549,31 +603,43 @@
     </div>
     <!-- Event End -->
 
-    <!-- Footer Start -->
+    <!-- QR Start -->
     <div
-      class="container-fluid bg-dark text-white py-5"
-      id="contact"
-      style="margin-top: 90px"
+      class="container-fluid py-5"
+      id="donate"
+      style="background-color: #f2eded"
     >
-      <div class="container text-center py-5">
-        <h5 class="font-secondary display-4 text-white mb-5">
-          Bạn muốn gửi hồng báo cho cô dâu chú rể? 🥰🥰🥰
-        </h5>
-        <div
-          class="d-flex flex-column flex-md-row justify-content-center align-items-center"
-        >
-          <img
-            src="img/momo.jpg"
-            alt="momo"
-            class="mr-md-4 mb-4 mw-300px mh-md-300px mb-md-0"
-          />
-          <img
-            src="img/ocb.jpg"
-            alt="ocb"
-            class="mw-300px mh-md-300px mb-md-0"
-          />
+      <div class="section-title position-relative text-center">
+        <h1 class="font-secondary display-4">Hộp mừng cưới</h1>
+        <i class="far fa-heart text-dark"></i>
+      </div>
+      <div class="donate-container">
+        <div class="donate-card">
+          <h5>Mừng cưới đến chú rể</h5>
+          <img class="img-thumbnail my-3" src="img/momo.png" alt="" />
+          <p class="mb-2">Ứng dụng: <b>Momo</b></p>
+          <p class="mb-2">Tên tài khoản: <b>Nguyễn Thành Nam</b></p>
+          <p class="mb-2">Số tài khoản: <b>033 4366 133</b></p>
+        </div>
+        <div class="donate-card">
+          <h5>Mừng cưới đến cô dâu</h5>
+          <img class="img-thumbnail my-3" src="img/ocb.png" alt="" />
+          <p class="mb-2">Ngân hàng: <b>OCB</b></p>
+          <p class="mb-2">Tên tài khoản: <b>Phạm Thị Bích Ngọc</b></p>
+          <p class="mb-2">Số tài khoản: <b>0025 1000 0626 0003</b></p>
         </div>
       </div>
+    </div>
+    <!-- QR End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid py-5" id="footer">
+      <div class="footer">
+        <div class="img-container">
+          <img src="img/event-1.jpg" />
+        </div>
+      </div>
+      <h2 class="mt-4 font-secondary">Thank you!</h2>
     </div>
     <!-- Footer End -->
 

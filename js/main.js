@@ -1,5 +1,10 @@
 (function ($) {
   "use strict";
+  // Loading
+  setTimeout(() => {
+    $("body").css("overflow", "auto");
+    $(".loading").fadeOut("slow");
+  }, 3000);
 
   // Navbar on scrolling
   $(window).scroll(function () {
@@ -106,5 +111,7 @@
     }, 3000);
   }
 
-  setInterval(hearts, 500);
+  setTimeout(() => {
+    setInterval(hearts, 500);
+  }, 3000);
 })(jQuery);
